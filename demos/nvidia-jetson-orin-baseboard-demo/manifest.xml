@@ -10,8 +10,10 @@
       <linkfile dest="build/conf/local.conf" src="demos/nvidia-jetson-orin-baseboard-demo/local.conf"/>
     </project> -->
 
-    <linkfile dest="build/conf/bblayers.conf" src="demos/nvidia-jetson-orin-baseboard-demo/bblayers.conf"/>
-    <linkfile dest="build/conf/local.conf" src="demos/nvidia-jetson-orin-baseboard-demo/local.conf"/>
+    <project name="Nexus-Carrier-Board" remote="FutureProofHomes" revision="master" path="sources/Nexus-Carrier-Board">
+      <linkfile dest="build/conf/bblayers.conf" src="demos/nvidia-jetson-orin-baseboard-demo/bblayers.conf"/>
+      <linkfile dest="build/conf/local.conf" src="demos/nvidia-jetson-orin-baseboard-demo/local.conf"/>
+    </project>
 
     <project name="poky.git" remote="yoctoproject" revision="kirkstone" path="sources/poky"/>
     <project name="meta-openembedded.git" remote="meta-openembedded" revision="kirkstone" path="sources/meta-openembedded"/>

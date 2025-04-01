@@ -37,6 +37,28 @@ docker run --rm -v <build-dir>:/data -u $(id -u):$(id -u) -it yoctobuilder
 
 **Note:** This command runs a Docker container that will be removed upon closing (`--rm`), mounts the build directory in the `/data` partition in the container (`-v <build-dir>:/data`) and builds the system as the `oe-builder` user (`$(id -u):$(id -u)`), since Yocto does not allow `root` builds.
 
+NOTE: On MacOS, in order to be dropped into the `oe-builder` user with proper volume , I needed to:
+
+1. Create a case-sensitive sparse image:
+```
+hdiutil create -type SPARSE -fs "Case-sensitive APFS" -size 100g -volname YoctoBuild ./yocto-build.dmg
+```
+
+2. Mount it:
+```
+hdiutil attach ./yocto-build.dmg.sparseimage
+```
+
+3. Find the mount point, e.g., /Volumes/YoctoBuild, and use it when running Docker:
+```
+docker run --rm -v /Volumes/YoctoBuild:/data -u 1000:1000 -it yoctobuilder
+```
+
+4. Change into the data volume directory:
+```
+cd data/
+```
+
 ## Demos
 
 The [demos directory](demos) provides the Yocto build configuration files, as well as the [Google repo tool](https://gerrit.googlesource.com/git-repo/) manifests to quickly start testing and development of Yocto-based systems.

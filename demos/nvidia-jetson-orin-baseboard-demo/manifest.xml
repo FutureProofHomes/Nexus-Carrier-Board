@@ -10,7 +10,7 @@
       <linkfile dest="build/conf/local.conf" src="demos/nvidia-jetson-orin-baseboard-demo/local.conf"/>
     </project> -->
 
-    <project name="Nexus-Carrier-Board" remote="FutureProofHomes" revision="master" path="sources/Nexus-Carrier-Board">
+    <project name="nexus-carrier-board" remote="futureproofhomes" revision="master" path="sources/nexus-carrier-board">
       <linkfile dest="build/conf/bblayers.conf" src="demos/nvidia-jetson-orin-baseboard-demo/bblayers.conf"/>
       <linkfile dest="build/conf/local.conf" src="demos/nvidia-jetson-orin-baseboard-demo/local.conf"/>
     </project>

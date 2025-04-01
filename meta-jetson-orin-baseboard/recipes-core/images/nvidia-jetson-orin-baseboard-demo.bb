@@ -28,4 +28,11 @@ IMAGE_INSTALL:append = " \
     python3-pip \
     tps65988-flash \
     gstreamer1.0 \
+    git \
+    docker \
+    packagegroup-core-tools-profile \
 "
+
+# Enable docker.service at boot
+SYSTEMD_AUTO_ENABLE = "enable"
+SYSTEMD_SERVICE:append = " docker.service"

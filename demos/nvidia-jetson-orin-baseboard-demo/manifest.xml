@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote fetch="${REPO_URL}/../" name="futureproofhomes" />
+    <!-- <remote fetch="${REPO_URL}/../" name="antmicro" /> -->
+    <remote fetch="https://github.com/FutureProofHomes/" name="futureproofhomes" />
     <remote fetch="https://git.yoctoproject.org/git/" name="yoctoproject"/>
     <remote fetch="https://github.com/openembedded/" name="meta-openembedded"/>
     <remote fetch="https://github.com/OE4T/" name="meta-tegra"/>

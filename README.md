@@ -37,7 +37,7 @@ docker run --rm -v <build-dir>:/data -u $(id -u):$(id -u) -it yoctobuilder
 
 **Note:** This command runs a Docker container that will be removed upon closing (`--rm`), mounts the build directory in the `/data` partition in the container (`-v <build-dir>:/data`) and builds the system as the `oe-builder` user (`$(id -u):$(id -u)`), since Yocto does not allow `root` builds.
 
-NOTE: On MacOS, in order to be dropped into the `oe-builder` user with proper volume , I needed to:
+NOTE: On MacOS, in order for Docker to drop me into the correct `oe-builder` user with proper volume that supports a case-sensitive filesystem , I needed to:
 
 1. Create a case-sensitive sparse image:
 ```

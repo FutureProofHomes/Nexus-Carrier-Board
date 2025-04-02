@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <!-- <remote fetch="${REPO_URL}/../" name="antmicro" /> -->
+    <remote fetch="${REPO_URL}/../" name="antmicro" />
     <remote fetch="https://github.com/FutureProofHomes/" name="futureproofhomes" />
     <remote fetch="https://git.yoctoproject.org/git/" name="yoctoproject"/>
     <remote fetch="https://github.com/openembedded/" name="meta-openembedded"/>
     <remote fetch="https://github.com/OE4T/" name="meta-tegra"/>
 
-    <!-- <project name="meta-antmicro" remote="antmicro" revision="master" path="sources/meta-antmicro">
-      <linkfile dest="build/conf/bblayers.conf" src="demos/nvidia-jetson-orin-baseboard-demo/bblayers.conf"/>
+    <project name="meta-antmicro" remote="antmicro" revision="master" path="sources/meta-antmicro" />
+      <!-- <linkfile dest="build/conf/bblayers.conf" src="demos/nvidia-jetson-orin-baseboard-demo/bblayers.conf"/>
       <linkfile dest="build/conf/local.conf" src="demos/nvidia-jetson-orin-baseboard-demo/local.conf"/>
     </project> -->
 

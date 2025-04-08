@@ -15,7 +15,7 @@
       <linkfile dest="build/conf/local.conf" src="demos/nvidia-jetson-orin-baseboard-demo/local.conf"/>
     </project>  -->
 
-  <project name="nexus-carrier-board" remote="futureproofhomes" revision="master"
+  <project name="nexus-carrier-board" remote="futureproofhomes" revision="develop"
     path="sources/nexus-carrier-board">
     <linkfile dest="build/conf/bblayers.conf"
       src="demos/nvidia-jetson-orin-baseboard-demo/bblayers.conf" />
